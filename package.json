@@ -1,0 +1,25 @@
+{
+  "name": "socialdb",
+  "version": "1.0.0",
+  "description": "Social Media Web App API",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^6.1.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RU3YKat/socialDB.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RU3YKat/socialDB/issues"
+  },
+  "homepage": "https://github.com/RU3YKat/socialDB#readme"
+}
