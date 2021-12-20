@@ -24,13 +24,14 @@ router
     .delete(deleteThought)
 
 // /api/thoughts/:thoughtId/reactions/:reactionId
+// PUT route to create reaction because we're updating the existing thought resource
 router
     .route('/:thoughtId/reactions')
-    .post(createReaction);
+    .put(createReaction)
 
 router
     .route('/:thoughtId/reactions/:reactionId')
-    .delete(removeReaction);
+    .delete(removeReaction)
 
 
 module.exports = router;
