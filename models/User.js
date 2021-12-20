@@ -12,7 +12,7 @@ const UserSchema = new Schema (
             type: String,
             required: true,
             unique: true,
-            match: [/.+\@.+\..+/]
+            match: [/.+\@.+\..+/, 'Input valid email address!']
         },
         thoughts: [
             {
@@ -25,7 +25,8 @@ const UserSchema = new Schema (
             {
                 // _id values referencing User model (self-referencing)
                 type: Schema.ObjectId,
-                required: true
+                required: true,
+                ref: 'User'
             }
         ]
     },

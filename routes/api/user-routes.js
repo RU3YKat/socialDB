@@ -1,5 +1,4 @@
 const router = require('express').Router();
-const path = require('path');
 
 const {
     getAllUser,
@@ -22,5 +21,6 @@ router
     .put(updateUser)
     .delete(deleteUser);
 
+// NEED SELF-REFLECTIVE FRIEND ROUTES BY USER ID
 
 module.exports = router;

@@ -1,11 +1,36 @@
 const router = require('express').Router();
-const { addThought, removeThought } = require('../../controllers/thought-controller');
 
-// /api/thoughts/<userId>
-router.route('/:userId').post(addThought);
+const { 
+    getAllThoughts, 
+    getThoughtById, 
+    createThought, 
+    updateThought, 
+    deleteThought,
+    createReaction, 
+    removeReaction 
+} = require('../../controllers/thought-controller');
 
-// /api/thoughts/<userId>/<thoughtId>
-router.route('/:userId/:thoughtId').delete(removeThought);
+// GET all and POST at /api/thoughts
+router
+    .route('/')
+    .get(getAllThoughts)
+    .post(createThought)
+
+// GET one, PUT to update, and DELETE by Id
+router
+    .route('/:id')
+    .get(getThoughtById)
+    .put(updateThought)
+    .delete(deleteThought)
+
+// /api/thoughts/:thoughtId/reactions/:reactionId
+router
+    .route('/:thoughtId/reactions')
+    .post(createReaction);
+
+router
+    .route('/:thoughtId/reactions/:reactionId')
+    .delete(removeReaction);
 
 
 module.exports = router;
