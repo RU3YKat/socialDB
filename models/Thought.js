@@ -48,7 +48,8 @@ const ThoughtSchema = new Schema(
         },
         username: {
             type: String,
-            required: true
+            required: true,
+            ref: 'User'
         },
         reactions: 
             // array of nested documents created in reactionSchema
@@ -56,7 +57,7 @@ const ThoughtSchema = new Schema(
     },
     {
         toJSON: {
-            // virtuals: true,
+            virtuals: true,
             getters: true
         },
         id: false

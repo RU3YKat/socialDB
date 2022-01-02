@@ -5,13 +5,15 @@ const UserSchema = new Schema (
         username: {
             type: String,
             unique: true,
-            required: true,
+            required: 'Please enter Username!',
             trim: true
         },
         email: {
             type: String,
             required: true,
             unique: true,
+            trim: true,
+            // regex for basic email format including @
             match: [/.+\@.+\..+/, 'Input valid email address!']
         },
         thoughts: [
@@ -24,8 +26,7 @@ const UserSchema = new Schema (
         friends: [
             {
                 // _id values referencing User model (self-referencing)
-                type: Schema.ObjectId,
-                required: true,
+                type: Schema.Types.ObjectId,
                 ref: 'User'
             }
         ]
@@ -34,6 +35,7 @@ const UserSchema = new Schema (
         // tells Schema to use virtuals
         toJSON: {
             virtuals: true,
+            getters: true
         },
         id: false
     }
