@@ -18,7 +18,6 @@ const userController = {
     },
 
     // get one user by id
-    //  ADD POPULATED THOUGHT AND FRIEND DATA
     getUserById({ params }, res) {
         User.findOne({ _id: params.id })
             .populate({
@@ -31,11 +30,10 @@ const userController = {
             })
             .select("-__v")
             .then(dbUserData => {
-            // if no user is found, send 404
-            if (!dbUserData) {
-                res.status(404).json({ message: 'No pizza found with this id!'});
-                return;
-            }
+                if (!dbUserData) {
+                    res.status(404).json({ message: 'No user found with this id!'});
+                    return;
+                }
             res.json(dbUserData);
         })
         .catch(err => {
