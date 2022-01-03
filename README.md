@@ -21,10 +21,10 @@ SocialDB is an API with CRUD routes for users, their thoughts, other user's reac
 ## [Technology](#technology)
 
 - [node.js](https://nodejs.dev/)
-- [noSQL](https://dev.mysql.com/doc/mysql-installation-excerpt/5.7/en/)
-- [MongoDB](https://expressjs.com/)
-- [MongoDB Atlas](https://www.npmjs.com/package/express-session)
-- [Mongoose](https://www.npmjs.com/package/connect-session-sequelize)
+- [noSQL](https://www.oracle.com/database/technologies/nosql-database-server-downloads.html)
+- [MongoDB](https://www.mongodb.com/try/download/community)
+- [MongoDB Atlas](https://www.mongodb.com/cloud/atlas/lp/try2?utm_content=1217adtest_pmcopy_control&utm_source=google&utm_campaign=gs_americas_united_states_search_core_brand_atlas_desktop&utm_term=download%20mongodb%20atlas&utm_medium=cpc_paid_search&utm_ad=e&utm_ad_campaign_id=12212624338&adgroup=115749704063&gclid=Cj0KCQiA2sqOBhCGARIsAPuPK0jp-B9G6F9l2PwAga0RErKx_Q-YNdSlK_TWZU5LziBrn-KmrFXjPncaAvXIEALw_wcB)
+- [Mongoose](https://www.npmjs.com/package/mongoose)
 
 ## [Installation](#installation)
 
