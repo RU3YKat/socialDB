@@ -43,8 +43,10 @@ CRUD routes are as follows:
    - GET all Users
    - POST create new User
      ```
+     {
      "username": <username>,
      "email": <user's email>
+     }
      ```
 
 2. `/api/users/:id`
@@ -65,12 +67,13 @@ CRUD routes are as follows:
 
    - GET all Thoughts
    - POST new Thought
-
-   ```
-   "thoughtText": <user's thought>,
-   "username": <associated username>,
-   "userId": <associated user's id>
-   ```
+      ```
+      {
+      "thoughtText": <user's thought>,
+      "username": <associated username>,
+      "userId": <associated user's id>
+      }
+      ```
 
 6. `/api/thoughts/:id`
 
@@ -81,15 +84,17 @@ CRUD routes are as follows:
 7. `/api/thoughts/:thoughtId/reactions`
 
    - POST create new Reaction
-
-   ```
-   "reactionBody": <user's reaction text>,
-   "username": <username posting reaction>
-   ```
+      ```
+      {
+      "reactionBody": <user's reaction text>,
+      "username": <username posting reaction>
+      }
+      ```
 
 8. `/api/thoughts/:thoughtId/reactions/:reactionId`
 
-   - DELETE remove Reaction by Id
+   - DELETE remove Reaction by Id      
+   
 
 ## [License](#license)
 
